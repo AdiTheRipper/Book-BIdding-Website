@@ -39,7 +39,7 @@ def login_view(request):
         password = request.POST["password"]
         user = authenticate(request, username=username, password=password)
 
-        # Check if authentication successful
+        # Check if authentication successfull  
         if user is not None:
             login(request, user)
             return HttpResponseRedirect(reverse("index"))
